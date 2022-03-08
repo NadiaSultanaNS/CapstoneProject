@@ -9,7 +9,7 @@ function RecipeHeader({ meal }) {
         })
     }
     return (
-        <div className="card mb-3" style={{ minWidth: "640px" }}>
+        <div className="cardx card mb-3" style={{ minWidth: "640px" }}>
             <div className="row g-0">
                 <div className="col-md-4">
                     <img src={meal.strMealThumb} className="img-fluid rounded-start" alt="..." />

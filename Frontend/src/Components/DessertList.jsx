@@ -29,9 +29,10 @@ function DessertList() {
 
     }, [])
     return (
-        <div className="d-flex justify-content-center p-5">
-
-            <div className="row row-cols-auto d-flex justify-content-center ">{itemList}</div>
+        <div className="text-center">
+            <div className="d-flex justify-content-center p-5">
+                <div className="row row-cols-auto d-flex justify-content-center ">{itemList}</div>
+            </div>
         </div>
     )
 

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.springrest.capstoneproject.model.Recipe;
 import com.springrest.capstoneproject.model.User;
 import com.springrest.capstoneproject.service.RecipeService;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/recipes")
 public class RecipeController {
@@ -37,10 +38,13 @@ public class RecipeController {
 			return new ResponseEntity<Recipe>(HttpStatus.NOT_FOUND);
 		}
 	}
+
 	@PostMapping("")
-	public void addRecipe(@RequestBody Recipe recipe) {
+	public ResponseEntity<Recipe> addRecipe(@RequestBody Recipe recipe) {
 		recipeService.saveRecipe(recipe);
+		return new ResponseEntity<Recipe>(recipe, HttpStatus.OK);
 	}
+	
 	@DeleteMapping("/{id}")
 	public void deleteRecipe(@PathVariable Integer id) {
 		recipeService.deleteRecipe(id);

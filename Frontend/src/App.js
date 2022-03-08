@@ -6,6 +6,8 @@ import RecipeDetails from './Components/RecipeDetails';
 import { createContext, useReducer, useState } from 'react';
 import Favourites from './Components/Favorties';
 import FavoriteContext from './Components/FavoriteContext';
+import AddRecipe from './Components/CustomRecipe/AddRecipe'
+import ListRecipe from './Components/CustomRecipe/ListRecipe';
 
 //declaring reducer
 function reducer(state, action) {
@@ -46,6 +48,8 @@ function App() {
                       <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
                       <Link className="nav-link active" to="/dessertlist">Dessert List</Link>
                       <Link className="nav-link active" to="/favorites">Favorites</Link>
+                      <Link className="nav-link active" to="/addrecipe">Add New Recipe</Link>
+                      <Link className="nav-link active" to="/listrecipe">Your Recipes</Link>
                     </ul>
                   </div>
                 </div>
@@ -58,6 +62,8 @@ function App() {
               <Route path="/dessertlist" element={<DessertList />} />
               <Route path="/details/:id" element={<RecipeDetails />} />
               <Route path="/favorites" element={<Favourites />} />
+              <Route path="/addrecipe" element={<AddRecipe />} />
+              <Route path="/listrecipe" element={<ListRecipe />} />
             </Routes>
           </div>
         </Router>

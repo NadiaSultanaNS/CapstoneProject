@@ -9,7 +9,7 @@ function Favourites() {
     const [list, setList] = useState(null);
 
     const baseUrl = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert';
-        //calling another api
+    //calling another api
     React.useEffect(() => {
         axios.get(baseUrl).then((response) => {
             const dessertCards = (response.data.meals.map((meal) => {
@@ -38,7 +38,7 @@ function Favourites() {
 
     }, [])
     return (
-        <div>
+        <div className="text-center">
             {(list === null || list.length === 0) ? (<p>You Have NO Favorites Added</p>) : (<ul>
                 {list}
             </ul>)}
