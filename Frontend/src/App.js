@@ -8,6 +8,7 @@ import Favourites from './Components/Favorties';
 import FavoriteContext from './Components/FavoriteContext';
 import AddRecipe from './Components/CustomRecipe/AddRecipe'
 import ListRecipe from './Components/CustomRecipe/ListRecipe';
+import ShowRecipe from './Components/CustomRecipe/ShowRecipe';
 
 //declaring reducer
 function reducer(state, action) {
@@ -64,6 +65,7 @@ function App() {
               <Route path="/favorites" element={<Favourites />} />
               <Route path="/addrecipe" element={<AddRecipe />} />
               <Route path="/listrecipe" element={<ListRecipe />} />
+              <Route path="/showrecipe/:id" element={<ShowRecipe />} />
             </Routes>
           </div>
         </Router>

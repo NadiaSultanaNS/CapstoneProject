@@ -6,13 +6,15 @@ import NutrientCard from "./NutrientCard";
 import RecipeHeader from "./RecipeHeader";
 
 const recipeUrl = 'https://api.edamam.com/api/recipes/v2'
+
 function RecipeDetails() {
+
     const { id } = useParams();
     console.log(id);
     const baseUrl = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
     console.log(baseUrl);
     const [nutrientDetails, setNutrientDetails] = useState(null);
-
+    const [msg, setMsg] = useState("");
     const [recipeDetails, setRecipeDetails] = useState(null);
     const [isRecipeDetailsVisible, setRecipeDetailsVisible] = useState(true);
     const [HeaderComp, setHeaderComp] = useState(null);
@@ -25,7 +27,7 @@ function RecipeDetails() {
             console.log(response);
             console.log(mealDetails);
             setRecipeDetails(<DetailsCard meal={mealDetails} />)
-            setHeaderComp(<RecipeHeader meal={mealDetails} />)
+            setHeaderComp(<RecipeHeader meal={mealDetails} setMsg={setMsg} />)
 
             const recipeInfo = {
                 type: "public",
@@ -55,6 +57,7 @@ function RecipeDetails() {
     return (
         //includes conditional rendering
         <div>
+            <p className="text-success">{msg}</p>
             <div className="d-flex justify-content-center">{HeaderComp}</div>
             <div className="d-flex justify-content-center" >
                 {isRecipeDetailsVisible ? recipeDetails : nutrientDetails}

@@ -1,11 +1,13 @@
 import axios from 'axios';
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 export default function AddRecipe() {
     const [recipeTitle, setRecipeTitle] = useState("");
     const [recipeIngred, setRecipeIngred] = useState("");
     const [recipeDetail, setRecipeDetail] = useState("");
     const [errorMsg, setErrorMsg] = useState("");
+    const navigate = useNavigate();
 
     function handleSubmit() {
         setErrorMsg("");
@@ -32,6 +34,7 @@ export default function AddRecipe() {
             .then(res => {
                 console.log("Recipe has been added")
                 console.log(res.data);
+                navigate("/listrecipe")
             }).catch(error => {
                 console.log(error)
             })
