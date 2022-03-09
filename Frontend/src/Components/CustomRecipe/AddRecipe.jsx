@@ -30,7 +30,7 @@ export default function AddRecipe() {
 
         }
 
-        axios.post("http://localhost:3000/recipes", recipe)
+        axios.post("https://ddsbbackend.herokuapp.com/recipes", recipe)
             .then(res => {
                 console.log("Recipe has been added")
                 console.log(res.data);

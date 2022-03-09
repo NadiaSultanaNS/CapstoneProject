@@ -15,7 +15,7 @@ const ShowRecipe = () => {
     useEffect(() => {
 
         axios.get(
-            `http://localhost:3000/recipes/${id}`).then((response) => {
+            `https://ddsbbackend.herokuapp.com/recipes/${id}`).then((response) => {
                 console.log(response.data);
                 setRecipeTitle(response.data.recipeTitle)
                 setRecipeIngrd(response.data.recipeIngrd)
@@ -32,7 +32,7 @@ const ShowRecipe = () => {
     }, [id])
 
     function deleteRecipe(id) {
-        axios.delete(`http://localhost:3000/recipes/${id}`).then(res => {
+        axios.delete(`https://ddsbbackend.herokuapp.com/recipes/${id}`).then(res => {
             navigate("/listrecipe");
 
         }).catch(error => {
@@ -46,9 +46,12 @@ const ShowRecipe = () => {
             <h2>{recipeTitle}</h2>
             <p>{recipeIngrd}</p>
             <p>{recipeDesc}</p>
-            <button type="button" className="btn btn-danger" onClick={() => {
+            <button type="button" className="btn btn-danger mx-2" onClick={() => {
                 deleteRecipe(id)
             }}>Delete Recipe</button>
+            <button type="button" className="btn btn-dark mx-2" onClick={() => {
+                navigate("/updaterecipe/" + id)
+            }}>Edit Recipe</button>
         </div>
     )
 }

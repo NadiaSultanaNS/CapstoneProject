@@ -9,7 +9,7 @@ export default function ListRecipe() {
 
 
     React.useEffect(() => { //Calling  one api using async axios request function; also using useEffect.
-        axios.get("http://localhost:3000/recipes").then((response) => {
+        axios.get("https://ddsbbackend.herokuapp.com/recipes").then((response) => {
             const recipeList = (response.data.map((recipe) => {
                 //Creating a dessert card for each meal using the map function.
                 return (
