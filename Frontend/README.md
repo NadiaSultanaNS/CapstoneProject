@@ -10,8 +10,8 @@
 
 
 [Edamam API](https://www.edamam.com/)
-[The MealDB API](https://www.themealdb.com/)
-[Live Site Link:](https://dessertdelights.netlify.app/)
+[ The MealDB API ](https://www.themealdb.com/)
+[ Live Site Link](https://dessertdelights.netlify.app/)
 
 
 
