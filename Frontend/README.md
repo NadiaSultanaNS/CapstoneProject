@@ -18,13 +18,13 @@
 "*" Uses MVC architecture
 
 ## For Deployment
-"*" [ Heroku ](https://dashboard.heroku.com/apps), [  Netlify ](https://www.netlify.com/), [   PlanetScale](https://planetscale.com/)
+[ Heroku ](https://dashboard.heroku.com/apps), [  Netlify ](https://www.netlify.com/), [   PlanetScale](https://planetscale.com/)
 
 ### Future Delvelopment Goals
 "*" Create authentication functionality for login (if user is authenticated, then user gains access to the management tool. Otherwise, they receive a message: "Access Denied: Invalid User")
 
 ### API Used
-[Edamam API  ](https://www.edamam.com/)
+[Edamam API  ](https://www.edamam.com/), 
 [ The MealDB API ](https://www.themealdb.com/)
 
 
