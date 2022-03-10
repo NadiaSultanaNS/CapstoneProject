@@ -1,7 +1,8 @@
 # Website Name: Dessert Delights
+[ Live Site Link](https://dessertdelights.netlify.app/)
 
 ## Features
-"*" Dessert recipes detail with the measurement of ingredients.
+"*" Dessert recipes detail with the measurement of ingredients and nutritions.
 
 ## Frontend
 "*" A responsive Spring Boot application based on MVC architecture (Model, View, Controller)
@@ -19,9 +20,10 @@
 ### Future Delvelopment Goals
 "*" Create authentication functionality for login (if user is authenticated, then user gains access to the management tool. Otherwise, they receive a message: "Access Denied: Invalid User")
 
+### API Used
 [Edamam API](https://www.edamam.com/)
 [ The MealDB API ](https://www.themealdb.com/)
-[ Live Site Link](https://dessertdelights.netlify.app/)
+
 
 
 
